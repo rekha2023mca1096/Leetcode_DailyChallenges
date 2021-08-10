@@ -1,0 +1,33 @@
+lass Solution {
+public:
+    int minFlipsMonoIncr(string s) {
+        int oneCount=0,i;
+        int zero_to_ones=0;
+        while(i<s.size() && s.at(i) == '0')
+        {
+            i++;
+        }
+        for( i=0;i<s.size();i++)
+        {
+            char c=s.at(i);
+            if(c=='0')
+            {
+                zero_to_ones++;
+            }
+            else
+            {
+                oneCount++;
+            }
+            if(zero_to_ones>oneCount)
+            {
+                zero_to_ones=oneCount;
+            
+                
+            }
+                
+
+        }
+        return zero_to_ones;
+        
+    }
+};
